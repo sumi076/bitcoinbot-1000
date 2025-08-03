@@ -8,7 +8,7 @@ TOKEN = '8127163050:AAHbKsUB6Ou2vHw-QvghsKZdr0FXmkfQSMY'
 # 🔐 Reemplaza con tu chat_id (usa @userinfobot para encontrarlo)
 CHAT_ID = -1002735848978  # ejemplo: -1001234567890
 
-diferencia_minima = 1000  # USD de variación mínima para alerta
+diferencia_minima = 100  # USD de variación mínima para alerta
 intervalo_segundos = 60   # cada cuánto comprobar (segundos)
 
 # Inicializa bot
