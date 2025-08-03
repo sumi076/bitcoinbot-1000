@@ -10,7 +10,7 @@ CHAT_ID = -1002735848978  # ejemplo: -1001234567890
 
 diferencia_maxima = -100
 diferencia_minima = 100  # USD de variación mínima para alerta
-intervalo_segundos = 60   # cada cuánto comprobar (segundos)
+intervalo_segundos = 30   # cada cuánto comprobar (segundos)
 
 # Inicializa bot
 bot = telebot.TeleBot(TOKEN)
