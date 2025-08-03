@@ -8,6 +8,7 @@ TOKEN = '8127163050:AAHbKsUB6Ou2vHw-QvghsKZdr0FXmkfQSMY'
 # 🔐 Reemplaza con tu chat_id (usa @userinfobot para encontrarlo)
 CHAT_ID = -1002735848978  # ejemplo: -1001234567890
 
+diferencia_maxima = -100
 diferencia_minima = 100  # USD de variación mínima para alerta
 intervalo_segundos = 60   # cada cuánto comprobar (segundos)
 
@@ -71,7 +72,7 @@ def monitorear_cambios():
                 ultimo_precio = precio_actual
 
             # Solo envía alerta si el usuario las ha activado
-            elif alertas_activas and abs(precio_actual - ultimo_precio) >= diferencia_minima:
+            elif alertas_activas and abs(precio_actual - ultimo_precio) >= diferencia_minima or (precio_actual - ultimo_precio) <= diferencia_maxima:
                 delta = precio_actual - ultimo_precio
                 texto = (
                     f"🚨 Bitcoin cambió ${delta:,.2f}!\n"
